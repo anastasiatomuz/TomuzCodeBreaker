@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Breaker</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" async></script>
+</head>
+<body>
+
+    <header>
+    <h1>CODE BREAKER</h1>
+    <h2>Instructions</h2>
+    <p id="instructions">
+        As an international sneak thief, you break into vaults all the time.
+        Riddling out a simple 3 digit code is child's play for you.
+        But you must be getting sloppy in your old age because you've tripped an alarm.
+        In no time at all, the police will be all over the place.
+        Can you get into the vault before they arrive?
+    </p>
+
+    </header>
+
+    <!--organize user input of values and messages like hints-->
+    <div class="container">
+        <div class="userForm">
+            <!--the form where user uses "scrolls menu" to guess 3-digit code-->
+            <form id="myform">
+                <label>Try to guess the code!</label>
+                <br>
+                <input type="number" id="digit1"  min="0" max="9" step="1">
+                <input type="number" id="digit2"  min="0" max="9" step="1">
+                <input type="number" id="digit3"  min="0" max="9" step="1">
+                <br>
+                <input type="button" id="b3" onclick="runGame()" value="Guess the code!">
+            </form>
+        </div>
+    
+
+        <div class="guessInfo">
+            <p id="tries">Turns left: 7</p>
+            <p id="last">Last number guessed: You haven't tried any number yet.</p>
+            <p id="hint">Hints: You need to guess a number first</p>
+        </div>
+
+     
+    <h2 id="result"></h2>
+    <p id="congrat-message"></p>
+
+    </div>
+
+</body>
+</html>
+
+
+<!--
+    instructions for the project
+
+
+
+
+    The user will have to crack a 3 digit random code in 7 turns.
+    Each time the user completes a 3 digit guess,
+    the computer will tell him or her whether the code is
+    higher, lower, or correct.
+
+
+-->
+
+
